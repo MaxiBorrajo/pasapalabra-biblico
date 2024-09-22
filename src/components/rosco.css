@@ -1,0 +1,4 @@
+.letter {
+  transform: rotate(calc(360deg / 17 * var(--i)));
+  transform: translateX(80px);
+}

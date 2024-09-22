@@ -1,0 +1,58 @@
+/* clouds.css */
+.banner {
+  position: fixed;
+  width: 100%;
+  height: 50vh; /* Altura ajustada para que ocupe la mitad de la pantalla */
+  background-size: cover;
+  background-position: bottom;
+}
+
+.banner-top {
+  top: 0;
+  transform: scaleY(-1); /* Voltear verticalmente */
+}
+
+.banner-bottom {
+  bottom: 0;
+}
+
+.banner .clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.banner .clouds img {
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+}
+
+.banner .clouds-right img {
+  animation: animate-right calc(8s * var(--i)) linear infinite;
+}
+
+.banner .clouds-left img {
+  animation: animate-left calc(8s * var(--i)) linear infinite;
+}
+
+@keyframes animate-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes animate-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import StartScreenView from "./views/StartScreenView";
+import RoscoView from "./views/RoscoView";
+import { RoscoProvider } from "./context/RoscoContext";
 
 function App() {
+  const [startedGame, setStartedGame] = useState(false);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RoscoProvider>
+      <div className="min-h-screen w-full">
+        {startedGame ? (
+          <RoscoView />
+        ) : (
+          <StartScreenView setStartedGame={setStartedGame} />
+        )}
+
+        
+      </div>
+    </RoscoProvider>
   );
 }
 
