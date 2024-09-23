@@ -15,14 +15,14 @@ export default function RoscoComponent({
   const [timeLeft, setTimeLeft] = useState(15);
   const { setEndGame } = useContext(RoscoContext);
 
-  useEffect(() => {
-    if (timeLeft > 0) {
-      const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
-      return () => clearTimeout(timer);
-    } else {
-      handleLetterState("fallo");
-    }
-  }, [timeLeft]);
+  // useEffect(() => {
+  //   if (timeLeft > 0) {
+  //     const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
+  //     return () => clearTimeout(timer);
+  //   } else {
+  //     handleLetterState("fallo");
+  //   }
+  // }, [timeLeft]);
 
   useEffect(() => {
     setLettersState(() => [
@@ -213,14 +213,16 @@ export default function RoscoComponent({
         })}
       </div>
 
-      <div className="w-2/5 text-white flex flex-col gap-y-10 text-center mb-16">
+      <div className="w-2/5 text-white flex flex-col gap-y-8 text-center mb-16">
         <div className="flex flex-col gap-y-5">
           <h2 className="text-2xl font-bold">
             {currentTeam === "Team A" ? "Equipo A" : "Equipo B"}
           </h2>
           <h2
-            className={`text-2xl mb-2 ${timeLeft < 10 ? "text-red-500" : ""}`}
+            className={`text-2xl mb-2 ${timeLeft < 10 ? "text-red-500" : ""} flex justify-evenly items-center`}
           >
+            <p>{rosco[currentLetter].type === "starts" ? "Empieza con" : "Contiene"} <span className="font-bold text-3xl">{currentLetter.split("_")[0]}</span></p>
+            <p>
             <span
               className="inline-block animate-spin mr-1"
               style={{
@@ -231,6 +233,7 @@ export default function RoscoComponent({
               ⏳
             </span>
             Tiempo: {timeLeft}
+            </p>
           </h2>
         </div>
         <h3
