@@ -3,7 +3,7 @@ import React from "react";
 export default function EndGameView({ score }) {
   return (
     <div className="flex items-center justify-center min-h-screen bg-start bg-cover bg-center text-white p-8 gap-x-20">
-        <img src="/images/jesus.gif" alt="Jesus bailando" className="w-52"/>
+        <img src="/images/jesus.gif?raw=true" alt="Jesus bailando" className="w-52"/>
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-4xl font-bold mb-8 mt-14">
           🎉 ¡Juego finalizado! 🎉
@@ -41,7 +41,7 @@ export default function EndGameView({ score }) {
           Jugar de nuevo
         </button>
       </div>
-      <img src="/images/jesus.gif" alt="Jesus bailando" className="w-52"/>
+      <img src="/images/jesus.gif?raw=true" alt="Jesus bailando" className="w-52"/>
     </div>
   );
 }
