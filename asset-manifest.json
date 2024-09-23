@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/pasapalabra-biblico/static/css/main.369eee9c.css",
-    "main.js": "/pasapalabra-biblico/static/js/main.9cc7fad4.js",
+    "main.css": "/pasapalabra-biblico/static/css/main.64a51a65.css",
+    "main.js": "/pasapalabra-biblico/static/js/main.b92ad600.js",
     "static/media/background.webp": "/pasapalabra-biblico/static/media/background.93d7ecad4faa3ddefd1b.webp",
     "index.html": "/pasapalabra-biblico/index.html",
-    "main.369eee9c.css.map": "/pasapalabra-biblico/static/css/main.369eee9c.css.map",
-    "main.9cc7fad4.js.map": "/pasapalabra-biblico/static/js/main.9cc7fad4.js.map"
+    "main.64a51a65.css.map": "/pasapalabra-biblico/static/css/main.64a51a65.css.map",
+    "main.b92ad600.js.map": "/pasapalabra-biblico/static/js/main.b92ad600.js.map"
   },
   "entrypoints": [
-    "static/css/main.369eee9c.css",
-    "static/js/main.9cc7fad4.js"
+    "static/css/main.64a51a65.css",
+    "static/js/main.b92ad600.js"
   ]
 }
