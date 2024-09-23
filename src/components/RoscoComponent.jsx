@@ -15,14 +15,14 @@ export default function RoscoComponent({
   const [timeLeft, setTimeLeft] = useState(15);
   const { setEndGame } = useContext(RoscoContext);
 
-  // useEffect(() => {
-  //   if (timeLeft > 0) {
-  //     const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
-  //     return () => clearTimeout(timer);
-  //   } else {
-  //     handleLetterState("fallo");
-  //   }
-  // }, [timeLeft]);
+   useEffect(() => {
+     if (timeLeft > 0) {
+       const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
+       return () => clearTimeout(timer);
+     } else {
+       handleLetterState("fallo");
+     }
+  }, [timeLeft]);
 
   useEffect(() => {
     setLettersState(() => [
