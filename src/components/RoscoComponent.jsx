@@ -12,7 +12,7 @@ export default function RoscoComponent({
   const [currentLetter, setCurrentLetter] = useState(LETTERS[0]);
   const [lettersState, setLettersState] = useState([]);
   const [lastOtherTeamLetter, setLastOtherTeamLetter] = useState(LETTERS[0]);
-  const [timeLeft, setTimeLeft] = useState(15);
+  const [timeLeft, setTimeLeft] = useState(20);
   const { setEndGame } = useContext(RoscoContext);
 
    useEffect(() => {
