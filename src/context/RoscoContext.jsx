@@ -6,7 +6,7 @@ export const RoscoContext = createContext();
 
 // Proveedor del contexto
 export const RoscoProvider = ({ children }) => {
-  const [endGame, setEndGame] = useState(false);
+  const [endGame, setEndGame] = useState(true);
   const [score, setScore] = useState({
     "Team A": 0,
     "Team B": 0,
